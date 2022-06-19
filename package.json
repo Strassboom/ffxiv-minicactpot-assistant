@@ -1,0 +1,24 @@
+{
+  "name": "ffxiv-minicactpot-assistant",
+  "version": "1.0.0",
+  "description": "Displays stats for current Mini Cactpot and potential outcomes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Strassboom/ffxiv-minicactpot-assistant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Strassboom/ffxiv-minicactpot-assistant/issues"
+  },
+  "homepage": "https://github.com/Strassboom/ffxiv-minicactpot-assistant#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}

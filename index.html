@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #120E06;
+            }
+            th {
+                background-color: #3B2A15;
+            }
+            td {
+                background: #69541E;
+            }
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            div {
+                height: 100%;
+                float: left;
+            }
+            #left {
+                width:220px;
+                margin: 5px;
+            }
+            #center {
+                margin: 5px 0;
+                width: calc(100% - 460px);
+            }
+            #right {
+                margin: 5px;
+                width: 220px;
+            }
+            .gridSpace {
+                maxlength: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="left">
+            <input id="00" maxlength=1 type="text">
+            <input id="01" maxlength=1 type="text">
+            <input id="02" maxlength=1 type="text">
+            <input id="10" maxlength=1 type="text">
+            <input id="11" maxlength=1 type="text">
+            <input id="12" maxlength=1 type="text">
+            <input id="20" maxlength=1 type="text">
+            <input id="21" maxlength=1 type="text">
+            <input id="22" maxlength=1 type="text">
+        </div>
+        <div id="center">
+            <table style="width:33%">
+                <tr>
+                    
+                    <th colspan=5>MiniCactpot Calculations</th>
+                </tr>
+                <tr>
+                    <th id="001122">hi</th>
+                    <th id="001020">hello</th>
+                    <th id="011121">howareya</th>
+                    <th id="021222">howsitgoin</th>
+                    <th id="021120">howdy</th>
+                </tr>
+                <tr>
+                    <th id="000102">hie</th>
+                    <td name="00">Alfreds Futterkiste</td>
+                    <td name="01">Maria Anders</td>
+                    <td name="02">Germany</td>
+                </tr>
+                <tr>
+                    <th id="101112">hellow</th>
+                    <td name="10">Centro comercial Moctezuma</td>
+                    <td name="11">Francisco Chang</td>
+                    <td name="12">Mexico</td>
+                </tr>
+                <tr>
+                    <th id="202122">hai</th>
+                    <td name="20">Centro comercial Moctezuma</td>
+                    <td name="21">Francisco Chang</td>
+                    <td name="22">Mexico</td>
+                </tr>
+            </table>
+        </div>
+        <div id="right">
+            
+        </div>
+    </body>
+    <script>
+        const tileInputs = document.querySelectorAll('input[type="text"]');
+        const tiles = document.querySelectorAll('td');
+        console.log(tiles);
+        tiles.forEach((tile) => {
+            tile.addEventListener('focus', (event) => {
+                console.log(event.target.name);
+                document.querySelector(`td[name=${event.target.name}]`).background = '#CBAC4E';
+            });
+            tile.addEventListener('focusout', (event) => {
+                console.log(event.target.name);
+                document.querySelector(`td[name=${event.target.name}]`).background = '#69541E';
+            });
+        });
+        console.log(tiles)
+        // password.addEventListener('focus', (event) => {
+        // event.target.style.background = 'pink';
+        // });
+
+        // password.addEventListener('blur', (event) => {
+        // event.target.style.background = '';
+        // });
+    </script>
+</html>
