@@ -34,19 +34,26 @@
             .gridSpace {
                 maxlength: 1;
             }
+            .payoutLabel {
+                color: #9A9045;
+            }
+            .payoutInput, input {
+                background-color: #69541E;
+            }
         </style>
     </head>
     <body>
         <div id="left">
-            <input id="00" maxlength=1 type="text">
-            <input id="01" maxlength=1 type="text">
-            <input id="02" maxlength=1 type="text">
-            <input id="10" maxlength=1 type="text">
-            <input id="11" maxlength=1 type="text">
-            <input id="12" maxlength=1 type="text">
-            <input id="20" maxlength=1 type="text">
-            <input id="21" maxlength=1 type="text">
-            <input id="22" maxlength=1 type="text">
+            <input name="00" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)">
+            <input name="01" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)">
+            <input name="02" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)">
+            <input name="10" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)">
+            <input name="11" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)">
+            <input name="12" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)">
+            <input name="20" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)">
+            <input name="21" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)">
+            <input name="22" maxlength=1 autocomplete="off" type="text" onfocusin="selectedBG(this)" onfocusout="deselectedBG(this)"><br>
+            <input type="button" value="Calculate Low,High Values" onclick="setup()">
         </div>
         <div id="center">
             <table style="width:33%">
@@ -63,49 +70,174 @@
                 </tr>
                 <tr>
                     <th id="000102">hie</th>
-                    <td name="00">Alfreds Futterkiste</td>
-                    <td name="01">Maria Anders</td>
-                    <td name="02">Germany</td>
+                    <td name="00"></td>
+                    <td name="01"></td>
+                    <td name="02"></td>
                 </tr>
                 <tr>
                     <th id="101112">hellow</th>
-                    <td name="10">Centro comercial Moctezuma</td>
-                    <td name="11">Francisco Chang</td>
-                    <td name="12">Mexico</td>
+                    <td name="10"></td>
+                    <td name="11"></td>
+                    <td name="12"></td>
                 </tr>
                 <tr>
                     <th id="202122">hai</th>
-                    <td name="20">Centro comercial Moctezuma</td>
-                    <td name="21">Francisco Chang</td>
-                    <td name="22">Mexico</td>
+                    <td name="20"></td>
+                    <td name="21"></td>
+                    <td name="22"></td>
                 </tr>
             </table>
         </div>
         <div id="right">
-            
+            <label for="6" class="payoutLabel">6</label>
+            <input name="6" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="7" class="payoutLabel">7</label>
+            <input name="7" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="8" class="payoutLabel">8</label>
+            <input name="8" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="9" class="payoutLabel">9</label>
+            <input name="9" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="10" class="payoutLabel">10</label>
+            <input name="10" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="11" class="payoutLabel">11</label>
+            <input name="11" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="12" class="payoutLabel">12</label>
+            <input name="12" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="13" class="payoutLabel">13</label>
+            <input name="13" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="14" class="payoutLabel">14</label>
+            <input name="14" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="15" class="payoutLabel">15</label>
+            <input name="15" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="16" class="payoutLabel">16</label>
+            <input name="16" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="17" class="payoutLabel">17</label>
+            <input name="17" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="18" class="payoutLabel">18</label>
+            <input name="18" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="19" class="payoutLabel">19</label>
+            <input name="19" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="20" class="payoutLabel">20</label>
+            <input name="20" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="21" class="payoutLabel">21</label>
+            <input name="21" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="22" class="payoutLabel">22</label>
+            <input name="22" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="23" class="payoutLabel">23</label>
+            <input name="23" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
+            <label for="24" class="payoutLabel">24</label>
+            <input name="24" class="payoutInput" autocomplete="off" type="text" onfocusin="selectedPayout(this)" onfocusout="deselectedPayout(this)"><br>
         </div>
     </body>
     <script>
-        const tileInputs = document.querySelectorAll('input[type="text"]');
-        const tiles = document.querySelectorAll('td');
-        console.log(tiles);
-        tiles.forEach((tile) => {
-            tile.addEventListener('focus', (event) => {
-                console.log(event.target.name);
-                document.querySelector(`td[name=${event.target.name}]`).background = '#CBAC4E';
+        function createGrid() {
+            const freeNumbers = new Set([1,2,3,4,5,6,7,8,9]);
+            const toFill = [];
+            const grid = [
+                            [new Set(), new Set(), new Set()],
+                            [new Set(), new Set(), new Set()],
+                            [new Set(), new Set(), new Set()]
+                        ]
+            const submittedTiles = document.querySelectorAll(`td`);
+            submittedTiles.forEach((tile) => {
+                gridCoords = tile.getAttribute("name").split("").map((num) => { return parseInt(num); });
+                if (tile.innerHTML.length > 0) {
+                    currentNumber = parseInt(tile.innerHTML);
+                    freeNumbers.delete(currentNumber);
+                    grid[gridCoords[0]][gridCoords[1]] = new Set([currentNumber]);
+                }
+                else {
+                    toFill.push(gridCoords);
+                }
             });
-            tile.addEventListener('focusout', (event) => {
-                console.log(event.target.name);
-                document.querySelector(`td[name=${event.target.name}]`).background = '#69541E';
+            freeNumbersArray = Array.from(freeNumbers);
+            toFill.forEach((coords) => {
+                grid[coords[0]][coords[1]] = new Set(freeNumbersArray);
             });
-        });
-        console.log(tiles)
-        // password.addEventListener('focus', (event) => {
-        // event.target.style.background = 'pink';
-        // });
+            return grid;
+        }
 
-        // password.addEventListener('blur', (event) => {
-        // event.target.style.background = '';
-        // });
+        function createPaths() {
+            const paths = [
+                [[0,0],[1,1],[2,2]],
+                [[0,0],[1,0],[2,0]],
+                [[0,1],[1,1],[2,1]],
+                [[0,2],[1,2],[2,2]],
+                [[0,2],[1,1],[2,0]],
+                [[0,0],[0,1],[0,2]],
+                [[1,0],[1,1],[1,2]],
+                [[2,0],[2,1],[2,2]]
+            ];
+            return paths;
+        }
+
+        function checkForPayoutValues() {
+            payoutElems = document.querySelectorAll('input[class="payoutInput"');
+            payoutValues = [];
+            payoutElems.forEach((payoutElem) => {
+                if (payoutElem.value.length > 0) {
+                    payoutValues.push(parseInt(payoutElem.value));
+                }
+            });
+            if (payoutValues.length == payoutElems.length) {
+                return [true, [0,0,0,0,0,0].concat(payoutValues)];
+            }
+            return [false,[]];
+        }
+        
+        function pathLowHigh(grid,path) {
+            sums = [0,0];
+            chosenNums = new Set()
+            while (path.length > 0) {
+                minNum = Math.min(...Array.from(grid[path[0][0]][path[0][1]]).map(Number).filter((number) => { return !chosenNums.has(number) }));
+                maxNum = Math.max(...Array.from(grid[path[0][0]][path[0][1]]).map(Number).filter((number) => { return !chosenNums.has(number) }));
+                sums[0] += minNum;
+                sums[1] += maxNum;
+                chosenNums.add(minNum);
+                chosenNums.add(maxNum);
+                path = path.slice(1);
+            }
+            return sums;
+        }
+
+        function setup() {
+            const grid = createGrid();
+            paths = createPaths();
+            payout = checkForPayoutValues();
+            paths.forEach((path) => {
+                if (payout[0]) {
+                    minMaxList = pathLowHigh(grid,path);
+                    document.getElementById(path.flat().join("")).innerHTML = [payout[1][minMaxList[0]],payout[1][minMaxList[1]]].sort(function(a, b){return a-b});
+                }
+                else {
+                    document.getElementById(path.flat().join("")).innerHTML = pathLowHigh(grid,path);
+                }
+            });
+        }
+
+        function selectedBG(event) {
+            currentTile = document.querySelector(`td[name="${event.name}"]`);
+            currentTile.style.background = '#CBAC4E';
+            event.style.background = '#CBAC4E';
+        }
+
+        function deselectedBG(event) {
+            currentTile = document.querySelector(`td[name="${event.name}"]`);
+            currentTile.style.background = '#69541E';
+            currentTile.innerHTML = event.value;
+            event.style.background = '#69541E';
+        }
+
+        function selectedPayout(event) {
+            currentPayoutLabel = document.querySelector(`label[for="${event.name}"]`);
+            currentPayoutLabel.style.color = '#CBAC4E';
+            event.style.background = '#CBAC4E';
+        }
+
+        function deselectedPayout(event) {
+            currentPayoutLabel = document.querySelector(`label[for="${event.name}"]`);
+            currentPayoutLabel.style.color = '#9A9045';
+            event.style.background = '#69541E';
+        }
     </script>
 </html>
